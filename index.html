@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Toy Store Math Market — build toys, set prices, and practice making change.">
+  <title>Toy Store | Pixel Party Math Market</title>
+  <link rel="stylesheet" href="toy-store.css">
+  <link rel="stylesheet" href="toy-store-theme.css">
+  <link rel="stylesheet" href="toy-store-modal.css">
+  <link rel="stylesheet" href="toy-store-shelf.css">
+  <link rel="stylesheet" href="toy-store-sales.css">
+  <link rel="stylesheet" href="toy-store-reset.css">
+  <link rel="stylesheet" href="toy-store-customer.css">
+  <link rel="stylesheet" href="toy-store-arcade.css">
+</head>
+<body class="intro-open">
+  <div class="toy-app">
+    <header class="toy-topbar"><a class="brand" href="math-games.html">✦ PIXEL PARTY <small>MATH MARKET</small></a><div class="shop-name">🧸 TOY STORE</div><div class="top-right-actions"><div class="wallet">WALLET <strong id="coins">$25.00</strong></div><a class="build-toys-button" href="toy-builder.html" target="_blank" rel="noopener">BUILD TOYS!</a><button id="reset-round" class="reset-button">RESET ROUND</button></div></header>
+    <main>
+      <section class="welcome welcome-screen" id="welcome-screen"><div class="welcome-copy"><p class="eyebrow">WELCOME, SHOPKEEPER!</p><h1>TOY STORE<br><em>EXTRAVAGANZA</em></h1><p>Choose toy parts, build, price, and sell!</p><button id="enter-shop" class="enter-button">ENTER THE TOY STORE <span>→</span></button></div><div class="hero-toy" aria-label="A cute teddy bear">🧸<span>CUTE<br>TEDDY BEAR</span></div></section>
+      <section class="empty-shelf panel" id="empty-shelf"><div class="shelf-heading"><div><p class="eyebrow">YOUR TOY DISPLAY</p><h2>Empty shelf!</h2><p>Build a toy to give your store something special to sell.</p></div><div class="shelf-sign">NO TOYS<br>YET</div></div><div class="shelf-wood"><div class="shelf-level"><span class="pixel-dust">✦</span><span class="empty-label">WAITING FOR YOUR FIRST TOY</span></div><div class="shelf-level"></div></div><p class="shelf-tip">Click <b>BUILD TOYS!</b> in the top-right corner to open the parts workshop.</p></section>
+      <section class="arcade-portal"><div><p class="eyebrow">PIXEL PARTY ARCADE</p><h2>Need a quick break?</h2><p>Play two classic puzzle games in separate tabs.</p></div><div class="arcade-links"><a href="tetris.html" target="_blank" rel="noopener">TETRIS ↗</a><a href="2048.html" target="_blank" rel="noopener">2048 ↗</a></div></section>
+      <section class="workshop-grid">
+        <article class="panel build-panel"><div class="panel-heading"><div><p class="eyebrow">STEP 01</p><h2>Build your toy</h2></div><span class="cost-pill">PARTS COST <b id="parts-cost">$0.00</b></span></div><div id="toy-preview" class="toy-preview">🧩<small>Choose parts below</small></div><div class="parts-grid"><button class="part" data-part="body" data-cost="3">🧩<b>Body</b><small>$3.00</small></button><button class="part" data-part="wheels" data-cost="2">⚙️<b>Wheels</b><small>$2.00</small></button><button class="part" data-part="paint" data-cost="1.5">🎨<b>Paint</b><small>$1.50</small></button><button class="part" data-part="sound" data-cost="2.5">🔔<b>Sound</b><small>$2.50</small></button></div><button id="build" class="action-button">BUILD TOY <span>→</span></button></article>
+        <article class="panel sell-panel"><div class="panel-heading"><div><p class="eyebrow">STEP 02</p><h2>Sell your toy</h2></div><span class="sale-count"><b id="sold">0</b> SOLD</span></div><div id="sale-status" class="sale-status">Build a toy to open your shop.</div><label for="price">YOUR SELLING PRICE</label><div class="price-input"><span>$</span><input id="price" type="number" min="1" step=".25" placeholder="12.50"></div><button id="sell" class="action-button pink">OFFER TO CUSTOMER <span>→</span></button><div id="math-challenge"></div></article>
+      </section>
+      <section class="upgrade-panel panel"><div><p class="eyebrow">STEP 03</p><h2>Grow your workshop</h2><p>Use your profits to unlock better parts and make more valuable toys.</p></div><div class="upgrades"><div class="upgrade"><span>🌈 <b>Rainbow Paint</b><small>Make colorful collector toys</small></span><button data-upgrade="rainbow" data-cost="8">BUY $8</button></div><div class="upgrade"><span>🚀 <b>Rocket Pack</b><small>Build super-fast toys</small></span><button data-upgrade="rocket" data-cost="12">BUY $12</button></div></div></section>
+    </main>
+    <footer><span>PIXEL PARTY MATH MARKET</span><a href="math-games.html">← BACK TO ALL GAMES</a></footer>
+  </div>
+  <div id="reset-modal" class="reset-modal" aria-hidden="true"><div class="reset-card"><p class="eyebrow">START OVER?</p><h2>Reset this round?</h2><p>Your money, shelf, and unlocked supplies will return to the beginning.</p><div><button id="cancel-reset" class="cancel-reset">CANCEL</button><button id="confirm-reset" class="confirm-reset">YES, RESET</button></div></div></div>
+  <script src="toy-store.js"></script>
+</body>
+</html>

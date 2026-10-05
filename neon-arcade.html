@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Neon Arcade — pick a playful way to decide what to do next.">
+  <title>Neon Arcade | Pick Your Next Move</title>
+  <link rel="stylesheet" href="neon-arcade.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <header class="topbar">
+    <div class="brand-zone"><a class="logo" href="neon-arcade.html" aria-label="Neon Arcade home"><span class="logo-mark">✦</span><span>NEON<br><b>ARCADE</b></span></a><a class="prize-booth-link" href="prize-booth.html"><span>🎟</span> PRIZE BOOTH <b id="token-balance">0</b></a></div>
+    <div class="topbar-right"><span class="status-dot"></span><span>DECISION MODE: ON</span><button class="sound-button" id="sound-toggle" type="button" aria-pressed="true">♪ SOUND ON</button></div>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> YOUR NEXT MOVE AWAITS <span></span></p>
+        <h1 id="hero-title">What are we<br><em>doing next?</em></h1>
+        <p class="hero-description">No overthinking. Just choose an arcade game and let the neon decide your next little adventure.</p>
+        <button class="primary-button pulse-button" id="start-button" type="button">START PLAYING <span>↗</span></button>
+        <p class="micro-copy">A tiny game of chance for big main-character energy <b>✦</b></p>
+      </div>
+      <div class="hero-machine" aria-label="A glowing neon arcade cabinet illustration">
+        <div class="machine-glow"></div>
+        <div class="machine-screen"><span class="screen-spark">✦</span><strong>READY?</strong><small>INSERT FUN</small><span class="screen-spark right">✧</span></div>
+        <div class="machine-controls"><span class="joystick"><i></i></span><span class="machine-button pink"></span><span class="machine-button yellow"></span><span class="machine-button aqua"></span></div>
+        <div class="machine-base"><span>NEON ARCADE</span></div>
+        <span class="floating-star one">✦</span><span class="floating-star two">✧</span><span class="floating-star three">✦</span>
+      </div>
+    </section>
+
+    <section class="games-section" id="games" aria-labelledby="games-title">
+      <div class="section-heading"><div><p class="eyebrow">PICK YOUR PLAYER</p><h2 id="games-title">Choose your game</h2></div><p class="game-count">3 WAYS TO DECIDE <span>•</span> 1 NEXT MOVE</p></div>
+      <div class="game-grid">
+        <article class="game-card wheel-card"><div class="card-number">01</div><div class="card-art wheel-art"><div class="mini-wheel" aria-hidden="true"><span>DO</span><i></i></div><span class="card-spark spark-a">✦</span><span class="card-spark spark-b">✧</span></div><div class="card-content"><p class="card-kicker">CHANCE / SPIN</p><h3>Spin the Wheel</h3><p>Give it a whirl and see where the pointer lands.</p><button class="game-button" data-game="wheel" type="button">SPIN IT <span>↗</span></button></div></article>
+        <article class="game-card claw-card"><div class="card-number">02</div><div class="card-art claw-art"><div class="mini-claw" aria-hidden="true"><span class="claw-arm"></span><span class="claw-grabber">⌄</span><span class="claw-prize">★</span></div><span class="card-spark spark-a">✦</span><span class="card-spark spark-b">✧</span></div><div class="card-content"><p class="card-kicker">SKILL / GRAB</p><h3>Claw Machine</h3><p>Line it up, grab a prize, reveal your tiny mission.</p><button class="game-button" data-game="claw" type="button">GRAB A PRIZE <span>↗</span></button></div></article>
+        <article class="game-card mole-card"><div class="card-number">03</div><div class="card-art mole-art"><div class="mini-mole" aria-hidden="true"><span class="mole-ears"></span><span class="mole-face">● ●</span><b>⌣</b></div><span class="card-spark spark-a">✦</span><span class="card-spark spark-b">✧</span></div><div class="card-content"><p class="card-kicker">REFLEX / TAP</p><h3>Whack-a-Mole</h3><p>Catch the golden mole before it pops away.</p><button class="game-button" data-game="mole" type="button">START WHACKING <span>↗</span></button></div></article>
+      </div>
+    </section>
+
+    <section class="promise-strip"><span class="strip-icon">✦</span><p><b>EVERY PLAY LEAVES A NOTE</b><br>Your prize comes with one simple thing to do next.</p><span class="strip-lines">— — —</span></section>
+  </main>
+
+  <div class="modal-backdrop is-open" id="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-modal neon-panel"><button class="close-button" id="welcome-close" type="button" aria-label="Close welcome message">×</button><div class="modal-badge">✦ ✦ ✦</div><p class="eyebrow">WELCOME TO THE</p><h2 id="welcome-title">NEON<br><em>ARCADE</em></h2><p>Pick a game. Win a note.<br>Let the good times choose themselves.</p><button class="primary-button" id="modal-start" type="button">START PLAYING <span>↗</span></button><small>NO HIGH SCORE NEEDED</small></div>
+  </div>
+
+  <div class="modal-backdrop" id="game-modal" role="dialog" aria-modal="true" aria-labelledby="game-modal-title" aria-hidden="true">
+    <div class="game-modal neon-panel"><button class="exit-game-button" id="game-exit" type="button">← EXIT GAME</button><button class="close-button" id="game-close" type="button" aria-label="Close game">×</button><div class="modal-game-icon" id="modal-game-icon">✦</div><p class="eyebrow" id="modal-game-kicker">READY PLAYER</p><h2 id="game-modal-title">Pick a game</h2><div class="game-stage" id="game-stage"></div><div class="result-note" id="result-note" hidden><span class="note-pin">✦</span><p class="eyebrow">YOUR NEXT MOVE</p><p id="result-text"></p><button class="secondary-button" id="play-again" type="button">PLAY AGAIN <span>↻</span></button></div></div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="neon-arcade.js"></script>
+</body>
+</html>

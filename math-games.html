@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Pixel Party Math Market — fun real-world math games for students.">
+  <title>Pixel Party Math Market</title>
+  <link rel="stylesheet" href="math-games.css">
+  <link rel="stylesheet" href="math-games-theme.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="logo" href="#home" aria-label="Pixel Party Math Market home"><span>✦</span><b>PIXEL PARTY</b><small>MATH MARKET</small></a>
+      <div class="top-actions"><span class="student-badge">STUDENT EDITION</span><a href="Snack Shack!.html">Snack Shack ↗</a></div>
+    </header>
+
+    <main>
+      <section id="home" class="screen intro-screen active" aria-labelledby="intro-title">
+        <div class="intro-copy"><p class="eyebrow">REAL-WORLD MATH · BIG IDEAS</p><h1>Build it.<br><em>Price it.</em><br>Sell it!</h1><p class="lead">Run a toy shop, bake delicious treats, or design a clothing boutique while practicing the math you use every day.</p><button class="primary-button" data-action="start">START EXPLORING <span>→</span></button><p class="tiny-note">No sign-in · No downloads · Just practice</p></div>
+        <div class="intro-art" aria-label="Illustration of a toy, cupcake, and clothing design"><div class="art-sun"></div><div class="art-card toy-card">🧸<b>TOYS</b><small>BUILD &amp; SELL</small></div><div class="art-card bake-card">🧁<b>BAKERY</b><small>MEASURE &amp; BAKE</small></div><div class="art-card style-card">👕<b>BOUTIQUE</b><small>DESIGN &amp; PRICE</small></div><span class="spark spark-a">✦</span><span class="spark spark-b">✧</span></div>
+      </section>
+
+      <section id="hub" class="screen hub-screen" aria-labelledby="hub-title">
+        <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR CHALLENGE</p><h2 id="hub-title">What will you build today?</h2></div><div class="wallet">WALLET <strong id="hub-coins">$25.00</strong></div></div>
+        <div class="game-grid">
+          <article class="game-card toy-theme"><div class="card-icon">🧸</div><div class="card-copy"><span class="card-tag">SHOPKEEPER</span><h3>Toy Store</h3><p>Build toys, set fair prices, make change, and reinvest your earnings.</p><a class="start-game" href="index.html" target="_blank" rel="noopener">START GAME <span>↗</span></a></div></article>
+          <article class="game-card bake-theme"><div class="card-icon">🧁</div><div class="card-copy"><span class="card-tag">COMING SOON</span><h3>Sweet Bakery</h3><p>Measure ingredients, follow recipes, price your treats, and sell them.</p><button class="start-game" disabled>COMING SOON</button></div></article>
+          <article class="game-card style-theme"><div class="card-icon">👕</div><div class="card-copy"><span class="card-tag">COMING SOON</span><h3>Clothing Boutique</h3><p>Choose fabric, create outfits, calculate costs, and grow your fashion shop.</p><button class="start-game" disabled>COMING SOON</button></div></article>
+        </div>
+        <div class="how-it-works"><span>01 <b>Choose</b> a shop</span><i>→</i><span>02 <b>Solve</b> the math</span><i>→</i><span>03 <b>Grow</b> your business</span></div>
+      </section>
+
+      <section id="game" class="screen game-screen" aria-live="polite">
+        <div class="game-top"><button class="back-button" data-action="hub">← ALL GAMES</button><div class="game-title"><span id="game-icon">🧸</span><div><p class="eyebrow" id="game-role">SHOPKEEPER</p><h2 id="game-name">Toy Store</h2></div></div><div class="wallet">WALLET <strong id="game-coins">$25.00</strong></div></div>
+        <div id="game-board" class="game-board"></div>
+        <div id="message" class="message" role="status"></div>
+      </section>
+    </main>
+    <footer><span>PIXEL PARTY MATH MARKET</span><span>Practice makes progress ✦</span></footer>
+  </div>
+  <script src="math-games.js"></script>
+</body>
+</html>

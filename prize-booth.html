@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spend your Neon Arcade tokens at the Prize Booth.">
+  <title>Prize Booth | Neon Arcade</title>
+  <link rel="stylesheet" href="prize-booth.css">
+</head>
+<body>
+  <div class="booth-sparkles" aria-hidden="true">✦　✧　✦　✧　✦</div>
+  <header class="booth-topbar">
+    <a class="booth-brand" href="neon-arcade.html"><span>✦</span><b>NEON ARCADE</b></a>
+    <a class="back-link" href="neon-arcade.html">← BACK TO ARCADE</a>
+  </header>
+  <main class="booth-shell">
+    <section class="booth-hero">
+      <div><p class="eyebrow">WELCOME, WINNER!</p><h1>THE<br><em>PRIZE BOOTH</em></h1><p>Trade your hard-earned tokens for a little extra sparkle, squish, and party energy.</p></div>
+      <div class="ticket-machine" aria-label="Prize booth ticket machine"><div class="machine-top">TOKENS</div><strong id="token-balance">0</strong><span>✦ ✦ ✦</span><small>SPEND THEM WISELY</small></div>
+    </section>
+    <section class="prize-section" aria-labelledby="prize-title">
+      <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR REWARD</p><h2 id="prize-title">What’s calling your name?</h2></div><p class="token-note">YOU EARN 10 TOKENS<br>PER CATCH</p></div>
+      <div class="prize-grid">
+        <article class="prize-card teddy" data-prize="teddy" data-cost="30"><div class="prize-art">🧸</div><div class="prize-copy"><span class="price">30 TOKENS</span><h3>Teddy Bear</h3><p>A classic cuddle buddy for your imaginary shelf.</p><button class="buy-button" type="button">GET THE BEAR <span>↗</span></button></div></article>
+        <article class="prize-card puzzle" data-prize="puzzle" data-cost="40"><div class="prize-art">🧩</div><div class="prize-copy"><span class="price">40 TOKENS</span><h3>Glowing Puzzle Set</h3><p>Piece together something bright and brainy.</p><button class="buy-button" type="button">GET THE PUZZLE <span>↗</span></button></div></article>
+        <article class="prize-card duck" data-prize="duck" data-cost="50"><div class="prize-art">🦆</div><div class="prize-copy"><span class="price">50 TOKENS</span><h3>Big Duck Squishy</h3><p>Squeeze the stress away. Quack optional.</p><button class="buy-button" type="button">GET THE DUCK <span>↗</span></button></div></article>
+        <article class="prize-card confetti" data-prize="confetti" data-cost="70"><div class="prize-art">🎉</div><div class="prize-copy"><span class="price">70 TOKENS</span><h3>Party Confetti Style</h3><p>Swap the neon look for a colorful celebration.</p><button class="buy-button" type="button">CHANGE STYLE <span>↗</span></button></div></article>
+        <article class="prize-card disco" data-prize="disco" data-cost="100"><div class="prize-art">🪩</div><div class="prize-copy"><span class="price">100 TOKENS</span><h3>Disco Party Theme</h3><p>Turn on the lights and boogie for 5 minutes.</p><button class="buy-button" type="button">START THE DISCO <span>↗</span></button></div></article>
+      </div>
+    </section>
+  </main>
+  <div class="booth-toast" id="booth-toast" role="status"></div>
+  <script src="prize-booth.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Build TOYS! | Pixel Party</title>
+  <link rel="stylesheet" href="toy-builder.css">
+  <link rel="stylesheet" href="toy-builder-menu.css">
+  <link rel="stylesheet" href="toy-builder-quantity.css">
+</head>
+<body>
+  <div class="builder-app">
+    <header><a class="brand" href="index.html">← TOY STORE</a><div class="builder-title">TOY PARTS WORKSHOP</div><div class="builder-wallet">💰 <b id="builder-coins">$25.00</b></div><div class="part-counter"><b id="part-count">0</b> / 10 PARTS</div></header>
+    <main>
+      <aside class="parts-column left-parts" id="left-parts"><h2>PARTS</h2><button class="part-card" data-part="head" data-icon="🙂" data-cost="1.5"><span>🙂</span><b>HEAD</b><small>$1.50</small></button><button class="part-card" data-part="body" data-icon="🧸" data-cost="2"><span>🧸</span><b>BODY</b><small>$2.00</small></button><button class="part-card" data-part="wheels" data-icon="🛞" data-cost="1.5"><span>🛞</span><b>WHEELS</b><small>$1.50</small></button></aside>
+      <section class="build-zone"><div class="mat-label">BUILDING MAT</div><div class="pending-cost">COST PER TOY: <b id="parts-cost">$0.00</b></div><div id="mat" class="mat"><div class="mat-grid"></div><div id="empty-mat" class="empty-mat">CLICK PARTS<br>TO DROP THEM HERE</div></div><div id="selected-parts" class="selected-parts"></div><div class="builder-actions"><button id="clear-parts" class="secondary-button">CLEAR MAT</button><button id="make-toy" class="build-button" disabled>BUILD TOY! <span>→</span></button></div><p id="builder-message" class="builder-message">Choose any 2–10 parts. Money is charged after you choose the number of sets.</p></section>
+      <aside class="parts-column right-parts" id="right-parts"><h2>PARTS</h2><button class="part-card" data-part="arms" data-icon="🦾" data-cost="2"><span>🦾</span><b>ARMS</b><small>$2.00</small></button><button class="part-card" data-part="paint" data-icon="🎨" data-cost="1.5"><span>🎨</span><b>PAINT</b><small>$1.50</small></button><button class="part-card" data-part="sound" data-icon="🔔" data-cost="2"><span>🔔</span><b>SOUND</b><small>$2.00</small></button></aside>
+      <section class="unlock-shop"><h2>UNLOCKABLE PARTS</h2><p>Unlocking adds a new supply card to the workshop. Its cost is charged only when you build.</p><div class="unlock-grid"><button class="unlock-card" data-part="fabric" data-icon="🪡" data-cost="3">🪡 <b>FABRIC</b><small>$3.00</small></button><button class="unlock-card" data-part="smell" data-icon="🌱" data-cost="2">🌱 <b>SMELL</b><small>$2.00</small></button><button class="unlock-card" data-part="sticks" data-icon="🪵" data-cost="5">🪵 <b>WOODEN STICKS</b><small>$5.00</small></button><button class="unlock-card" data-part="glitter" data-icon="✨" data-cost="10">✨ <b>GLITTER</b><small>$10.00</small></button></div></section>
+      <section class="recipe-menu"><h2>TOY MENU · RANKED 1–10</h2><div class="recipe-list"><div><b>1</b> 🧸 Body + 🎨 Paint = 🪆 Wooden Doll</div><div><b>2</b> 🧸 Body + 🙂 Head + 🦾 Arms = 🧩 Block Set</div><div><b>3</b> 🧸 Body + 🙂 Head + 🦾 Arms + 🎨 Paint = 🧸 Teddy Bear</div><div><b>4</b> 🧸 Body + 🙂 Head + 🦾 Arms + 🎨 Paint + 🔔 Sound = 🤖 Robot</div><div><b>5</b> 🧸 Body + 🙂 Head + 🦾 Arms + 🎨 Paint + 🛞 Wheels + 🔔 Sound = 🚀 Toy Rocketship</div><div><b>6</b> 🧸 Body + 🙂 Head + 🦾 Arms + 🎨 Paint + 🔔 Sound + 🛞 Wheels = 👽 Alien Plush</div><div><b>7</b> 🧸 Body + 🙂 Head + 🦾 Arms + 🎨 Paint + 🌱 Smell = 🧶 Crocheting Set</div><div><b>8</b> 🎨 Paint + 🪡 Fabric + 🪵 Wooden Sticks = 🪁 Kite</div><div><b>9</b> 🪡 Fabric + ✨ Glitter + 🪵 Wooden Sticks + 🎨 Paint = 🎠 Carousel Night Lamp</div><div><b>10</b> ??? = DISCOVER IT!</div></div></section>
+    </main>
+    <footer><span>MAXIMUM: 10 PARTS</span><a href="index.html">← BACK TO SHOP</a></footer>
+  </div>
+  <div id="quantity-modal" class="quantity-modal" aria-hidden="true"><div class="quantity-card"><button id="close-quantity" class="close-quantity" aria-label="Close">×</button><p class="eyebrow">ORDER MULTIPLIER</p><div id="quantity-toy" class="quantity-toy">🧸</div><h2 id="quantity-title">How many sets?</h2><p>Choose how many sets of this toy you want to build.</p><label for="quantity">NUMBER OF SETS</label><input id="quantity" type="number" min="1" max="99" value="1"><div class="quantity-equation"><b id="unit-cost">$0.00</b> × <b id="set-count">1</b> = <strong id="total-cost">$0.00</strong></div><p id="quantity-error" class="quantity-error"></p><button id="confirm-build" class="build-button">PAY &amp; BUILD <span>→</span></button></div></div>
+  <script src="toy-builder.js"></script>
+</body>
+</html>

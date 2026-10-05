@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pixel Party</title>
+  <link rel="stylesheet" href="cat-cafe.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="brand"><b>✦ PIXEL PARTY</b><small>COZY CAT CAFÉ</small></div><div class="level" id="level">LEVEL 1 · RAINY SHIFT</div><div class="tips">✿ <b id="coins">0</b> tips</div><a style="color:#e4ae58;text-decoration:none;font-size:8px;font-weight:900;letter-spacing:.12em;white-space:nowrap" href="Snack Shack!.html">SNACK SHACK ↗</a><button id="new-day">NEW DAY</button></header>
+    <section class="game-wrap"><div class="scene-label"><span id="weather">RAINY AFTERNOON</span><span id="served">0 / 5 CATS SERVED</span></div><canvas id="game" width="960" height="600"></canvas><div id="prompt"></div><div id="toast"></div><div id="recipe"><div class="recipe-head">ACTIVE ORDER <b id="order-cat">—</b></div><strong id="order-name">Greet a customer to begin</strong><div id="steps"></div></div></section>
+  </main>
+  <div id="welcome" class="overlay open"><div class="modal"><div class="cat-mark">ฅ</div><small>WELCOME TO PIXEL PARTY</small><h1>PIXEL<br><em>PARTY</em></h1><p>You are the new tuxedo cat at the coziest café in town.</p><button id="start">OPEN THE CAFÉ</button></div></div>
+  <div id="finish" class="overlay"><div class="modal"><div class="cat-mark">♥</div><small>SHIFT COMPLETE</small><h1>PERFECT<br><em>AFTERNOON</em></h1><p>Every cat left happy, cozy, and well fed.</p><button id="again">START AGAIN</button></div></div>
+  <audio id="lofi" src="lofi_cafe.wav" loop preload="auto"></audio>
+  <script src="cat-cafe.js"></script>
+</body>
+</html>
